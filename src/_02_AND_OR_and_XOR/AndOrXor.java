@@ -42,9 +42,9 @@ public class AndOrXor {
 		num = 3 ^ 7;
 		System.out.println(num); // This prints 4
 		
-		// 3     = 0 1 1
-		// 7     = 1 1 1
-		// 3 ^ 7 = 1 0 0  <--When the two bits being compared are different, the resulting bit is 1. Otherwise, 0.
+		// 3     = 0 1 1 0
+		// 7     = 1 1 1 0
+		// 3 ^ 7 = 1 0 0 0<--When the two bits being compared are different, the resulting bit is 1. Otherwise, 0.
 		
 		// Example:
 		// What is the value of 9 | 11?

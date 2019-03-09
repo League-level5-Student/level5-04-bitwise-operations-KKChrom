@@ -2,6 +2,7 @@ package _04_Base64_Decoder;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.Base64;
 
 public class Base64Decoder {
 	/*
@@ -37,14 +38,27 @@ public class Base64Decoder {
 	//1. Complete this method so that it returns the the element in
 	//   the base64Chars array that corresponds to the passed in char.
 	public static byte convertBase64Char(char c){
-		return 0;
+	for(int i =0;i<base64Chars.length;i++)
+	{
+		if(base64Chars[i] == c)
+		{
+			return (byte) i;
+		}
+	}
+		return (byte) c;
 	}
 	
 	//2. Complete this method so that it will take in a string that is 4 
 	//   characters long and return an array of 3 bytes (24 bits). The byte 
 	//   array should be the binary value of the encoded characters.
 	public static byte[] convert4CharsTo24Bits(String s){
-		return null;
+		byte[] b = new byte[s.length()];
+		char[]c = new char[s.length()];
+		c= s.toCharArray();
+		b[0] = (byte) ((convertBase64Char(c[0])<<2)+(convertBase64Char(c[1])>>4));
+		b[1] = (byte) ((convertBase64Char(c[1])<<4)+(convertBase64Char(c[2])>>2));
+        b[2] = (byte) ((convertBase64Char(c[2])<<6)+(convertBase64Char(c[3])));
+		return b;
 	}
 	
 	//3. Complete this method so that it takes in a string of any length
