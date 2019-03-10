@@ -7,24 +7,32 @@ public class BinaryPrinter {
 	
 	public static void main(String[] args) {
 		byte c= 1;
-		printByteBinary b = new print;
-				
+		short s = 1;
+		int i = 1;
+		long a = 1;
+		
+		printByteBinary(c);
+		printShortBinary(s);
+		printIntBinary(i);
+		printLongBinary(a);
+		
+	};
+	
+	public static void printByteBinary(byte b) {
+	System.out.println(Integer.toBinaryString(b));
 	}
 	
-	public void printByteBinary(byte b) {
-	Integer.toBinaryString(b);
+	public static void printShortBinary(short s) {
+	
+		System.out.println(Integer.toBinaryString(s));
 	}
 	
-	public void printShortBinary(short s) {
-		Integer.toBinaryString(s);
+	public static void printIntBinary(int i) {
+		System.out.println(Integer.toBinaryString(i));
 	}
 	
-	public void printIntBinary(int i) {
-		Integer.toBinaryString(i);
-	}
-	
-	public void printLongBinary(long l) {
-		Integer.toBinaryString((int) l);
+	public static void printLongBinary(long l) {
+		System.out.println(Integer.toBinaryString((int) l));
 		
 	}
 }
